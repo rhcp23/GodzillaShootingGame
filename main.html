@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godzilla Bouncer Shooter</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="game-title">🦕 GODZILLA BOUNCER SHOOTER 🦕</div>
+    <div class="score-display">Score: <span id="score">0</span> | Hits: <span id="hits">0</span></div>
+    
+    <div class="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="roarDisplay" class="roar-display">RARRR!</div>
+        
+        <div class="controls">
+            <p>🎯 Click to shoot bullets at bouncing Godzilla!</p>
+            <p>⌨️ Use SPACEBAR for rapid fire mode!</p>
+            <p>🦕 Hit Godzilla to make him roar!</p>
+        </div>
+        
+        <button class="restart-btn" onclick="resetGame()">Reset Game</button>
+        
+        <div class="slider-container">
+            <label for="explosionThreshold">Shots Before Explosion:</label>
+            <input type="range" id="explosionThreshold" min="10" max="100" value="20" step="1">
+            <span id="thresholdValue">20</span>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+    <script>
+        const explosionSlider = document.getElementById('explosionThreshold');
+        const thresholdValue = document.getElementById('thresholdValue');
+
+        explosionSlider.addEventListener('input', () => {
+            thresholdValue.textContent = explosionSlider.value;
+            explosionThreshold = parseInt(explosionSlider.value, 10);
+        });
+    </script>
+</body>
+</html>
