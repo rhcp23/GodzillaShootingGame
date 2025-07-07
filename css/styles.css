@@ -39,7 +39,7 @@ body {
     border: 3px solid #ff6b35;
     border-radius: 10px;
     background: url('../images/background.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-size: cover;                                  
     display: block;
     cursor: crosshair;
 }

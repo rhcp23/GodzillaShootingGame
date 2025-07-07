@@ -22,22 +22,10 @@
         
         <button class="restart-btn" onclick="resetGame()">Reset Game</button>
         
-        <div class="slider-container">
-            <label for="explosionThreshold">Shots Before Explosion:</label>
-            <input type="range" id="explosionThreshold" min="10" max="100" value="20" step="1">
-            <span id="thresholdValue">20</span>
-        </div>
+       
     </div>
 
     <script src="js/game.js"></script>
-    <script>
-        const explosionSlider = document.getElementById('explosionThreshold');
-        const thresholdValue = document.getElementById('thresholdValue');
-
-        explosionSlider.addEventListener('input', () => {
-            thresholdValue.textContent = explosionSlider.value;
-            explosionThreshold = parseInt(explosionSlider.value, 10);
-        });
-    </script>
+   
 </body>
 </html>

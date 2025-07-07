@@ -11,14 +11,7 @@ let sizeMultiplier = 1;
 let bullets = [];      
 let particles = [];                     
 let animationId;
-let numberOfHitsBeforeExplosion = 990; 
-let explosionSlider = document.getElementById('explosionThreshold');
-let thresholdValue = document.getElementById('thresholdValue');
-
-explosionSlider.addEventListener('input', () => {
-    thresholdValue.textContent = explosionSlider.value;
-    numberOfHitsBeforeExplosion = parseInt(explosionSlider.value, 10);
-});
+let numberOfHitsBeforeExplosion = 100; 
 
 // Godzilla object
 const godzilla = {
